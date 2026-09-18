@@ -4,10 +4,11 @@ const decks = [
   {
     id: "token-efficient-mcp",
     title: "Designing a Token-Efficient MCP Server",
+    event: "Hackersmang, UniCourt",
+    date: "Sept 19, 2026",
     description:
       "How work on Drishti led to a three-tool MCP design that reduced initial tool overhead from 7,500+ tokens to roughly 280.",
-    date: "2026-09-19",
-    tags: ["MCP", "Drishti", "AI Agents"],
+    previewImage: "/cover-mcp.png",
   },
 ];
 
@@ -15,94 +16,174 @@ export default function HomePage() {
   return (
     <main
       style={{
-        maxWidth: "860px",
+        maxWidth: "760px",
         margin: "0 auto",
         padding: "80px 24px",
       }}
     >
-      <header style={{ marginBottom: "50px" }}>
-        <h1
+      {/* Portfolio Theme Header */}
+      <header
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "baseline",
+          borderBottom: "1px solid #27272a",
+          paddingBottom: "24px",
+          marginBottom: "40px",
+        }}
+      >
+        <div>
+          <h1
+            style={{
+              fontSize: "26px",
+              fontWeight: 600,
+              letterSpacing: "-0.03em",
+              margin: 0,
+              color: "#f4f4f5",
+            }}
+          >
+            Slides
+          </h1>
+          <p
+            style={{
+              fontSize: "14px",
+              color: "#a1a1aa",
+              margin: "4px 0 0",
+            }}
+          >
+            Presentations and talks by Jnanesh
+          </p>
+        </div>
+        <a
+          href="https://j.tuluve.dev"
           style={{
-            fontSize: "42px",
-            fontWeight: 400,
-            letterSpacing: "-0.04em",
-            margin: "0 0 12px",
+            color: "#a1a1aa",
+            fontSize: "14px",
+            textDecoration: "underline",
+            textUnderlineOffset: "4px",
           }}
         >
-          Presentations & Decks
-        </h1>
-        <p style={{ color: "#9a9e9f", fontSize: "18px", margin: 0 }}>
-          Interactive Slidev talks and slide decks.
-        </p>
+          j.tuluve.dev
+        </a>
       </header>
 
+      {/* Presentation Cards List */}
       <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
         {decks.map((deck) => (
           <article
             key={deck.id}
             style={{
-              border: "1px solid #34383a",
+              border: "1px solid #27272a",
               borderRadius: "12px",
-              padding: "28px",
-              backgroundColor: "rgba(255,255,255,0.02)",
-              transition: "border-color 0.2s ease",
+              padding: "20px",
+              backgroundColor: "rgba(24, 24, 27, 0.4)",
+              display: "grid",
+              gridTemplateColumns: "220px 1fr",
+              gap: "24px",
+              alignItems: "center",
             }}
           >
+            {/* First Slide Screenshot Preview */}
+            <Link
+              href={`/slides/${deck.id}`}
+              style={{
+                position: "relative",
+                aspectRatio: "16 / 9",
+                width: "100%",
+                overflow: "hidden",
+                borderRadius: "8px",
+                border: "1px solid #27272a",
+                display: "block",
+                backgroundColor: "#09090b",
+              }}
+            >
+              <img
+                src={deck.previewImage}
+                alt={`${deck.title} First Slide Preview`}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              />
+            </Link>
+
+            {/* Deck Content */}
             <div
               style={{
                 display: "flex",
+                flexDirection: "column",
                 justifyContent: "space-between",
-                alignItems: "baseline",
-                marginBottom: "12px",
+                height: "100%",
               }}
             >
-              <h2 style={{ fontSize: "24px", fontWeight: 400, margin: 0 }}>
+              <div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    fontSize: "13px",
+                    marginBottom: "6px",
+                  }}
+                >
+                  <span style={{ color: "#d4d4d8", fontWeight: 500 }}>
+                    {deck.event}
+                  </span>
+                  <span style={{ color: "#71717a" }}>{deck.date}</span>
+                </div>
+
+                <h2
+                  style={{
+                    fontSize: "18px",
+                    fontWeight: 600,
+                    margin: "0 0 6px",
+                    letterSpacing: "-0.02em",
+                  }}
+                >
+                  <Link
+                    href={`/slides/${deck.id}`}
+                    style={{
+                      color: "#f4f4f5",
+                      textDecoration: "none",
+                    }}
+                  >
+                    {deck.title}
+                  </Link>
+                </h2>
+
+                <p
+                  style={{
+                    color: "#a1a1aa",
+                    fontSize: "14px",
+                    lineHeight: "1.5",
+                    margin: 0,
+                  }}
+                >
+                  {deck.description}
+                </p>
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  marginTop: "16px",
+                }}
+              >
                 <Link
                   href={`/slides/${deck.id}`}
                   style={{
-                    color: "#82dfe9",
-                    textDecoration: "none",
+                    color: "#a1a1aa",
+                    fontSize: "13px",
+                    textDecoration: "underline",
+                    textUnderlineOffset: "4px",
                   }}
                 >
-                  {deck.title}
+                  View slides →
                 </Link>
-              </h2>
-              <span
-                style={{
-                  color: "#6f7476",
-                  fontSize: "13px",
-                  fontFamily: "monospace",
-                }}
-              >
-                {deck.date}
-              </span>
-            </div>
-            <p
-              style={{
-                color: "#9a9e9f",
-                fontSize: "15px",
-                lineHeight: "1.5",
-                margin: "0 0 20px",
-              }}
-            >
-              {deck.description}
-            </p>
-            <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-              {deck.tags.map((tag) => (
-                <span
-                  key={tag}
-                  style={{
-                    backgroundColor: "rgba(130, 223, 233, 0.1)",
-                    color: "#82dfe9",
-                    fontSize: "12px",
-                    fontFamily: "monospace",
-                    padding: "4px 10px",
-                    borderRadius: "6px",
-                  }}
-                >
-                  {tag}
-                </span>
-              ))}
+              </div>
             </div>
           </article>
         ))}
