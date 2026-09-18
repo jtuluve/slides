@@ -160,7 +160,7 @@ export default function HomePage() {
           {decks.map((deck) => (
             <a
               key={deck.id}
-              href={`/slides/${deck.id}/`}
+              href={`/slides/${deck.id}`}
               style={{
                 padding: "24px 0",
                 borderBottom: `1px solid ${theme.border}`,
