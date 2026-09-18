@@ -1,69 +1,153 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CalendarBlank } from "@phosphor-icons/react/dist/ssr";
 
 const decks = [
   {
     id: "token-efficient-mcp",
     title: "Designing a Token-Efficient MCP Server",
     event: "Hackersmang, UniCourt",
+    date: "Sept 19, 2026",
     description:
-      "Drishti’s three-tool MCP reduced initial tool context from 7,500+\u00a0tokens to about 280, then loads only the schemas a request needs.",
-    date: "2026-09-19",
-    dateLabel: "Sept 19, 2026",
-    tags: ["MCP", "Drishti", "AI Agents"],
+      "How work on Drishti led to a three-tool MCP design that reduced initial tool overhead from 7,500+ tokens to roughly 280.",
     previewImage: "/cover-mcp.png",
   },
 ];
 
 export default function HomePage() {
   return (
-    <main className="catalog">
-      <header className="catalog-header">
-        <p className="type-eyebrow">Manasija</p>
-        <h1 className="type-display">Presentations</h1>
-        <p className="type-body-prose">
-          Talks on turning noisy market systems into inspectable tools for
-          agents.
-        </p>
+    <main
+      style={{
+        maxWidth: "760px",
+        margin: "0 auto",
+        padding: "80px 24px",
+      }}
+    >
+      {/* Portfolio Theme Header */}
+      <header
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          borderBottom: "1px solid #27272a",
+          paddingBottom: "24px",
+          marginBottom: "40px",
+        }}
+      >
+        <h1
+          style={{
+            fontSize: "26px",
+            fontWeight: 600,
+            letterSpacing: "-0.03em",
+            margin: 0,
+            color: "#f4f4f5",
+          }}
+        >
+          Slides
+        </h1>
+        <a
+          href="https://j.tuluve.dev"
+          style={{
+            color: "#a1a1aa",
+            fontSize: "14px",
+            textDecoration: "underline",
+            textUnderlineOffset: "4px",
+          }}
+        >
+          j.tuluve.dev
+        </a>
       </header>
 
-      <section className="catalog-list" aria-label="Slide decks">
+      {/* Presentation Cards List */}
+      <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
         {decks.map((deck) => (
-          <article key={deck.id} className="catalog-item">
-            <Link href={`/slides/${deck.id}`} className="catalog-item-link">
-              <div className="catalog-preview">
-                <Image
-                  src={deck.previewImage}
-                  alt={`${deck.title} first slide`}
-                  fill
-                  sizes="(min-width: 768px) 220px, 100vw"
-                />
+          <Link
+            key={deck.id}
+            href={`/slides/${deck.id}`}
+            style={{
+              border: "1px solid #27272a",
+              borderRadius: "12px",
+              padding: "20px",
+              backgroundColor: "rgba(24, 24, 27, 0.4)",
+              display: "grid",
+              gridTemplateColumns: "220px 1fr",
+              gap: "24px",
+              alignItems: "center",
+              textDecoration: "none",
+              transition: "border-color 0.2s ease, background-color 0.2s ease",
+            }}
+          >
+            {/* First Slide Screenshot Preview */}
+            <div
+              style={{
+                position: "relative",
+                aspectRatio: "16 / 9",
+                width: "100%",
+                overflow: "hidden",
+                borderRadius: "8px",
+                border: "1px solid #27272a",
+                display: "block",
+                backgroundColor: "#09090b",
+              }}
+            >
+              <img
+                src={deck.previewImage}
+                alt={`${deck.title} First Slide Preview`}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              />
+            </div>
+
+            {/* Deck Content */}
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  fontSize: "12px",
+                  marginBottom: "6px",
+                  color: "#71717a",
+                }}
+              >
+                <span>{deck.event}</span>
+                <span>{deck.date}</span>
               </div>
-              <div>
-                <div className="catalog-item-meta">
-                  <h2>
-                    {deck.title}
-                    <ArrowRight
-                      aria-hidden="true"
-                      className="catalog-link-icon"
-                      size={18}
-                      weight="light"
-                    />
-                  </h2>
-                  <time className="type-mono" dateTime={deck.date}>
-                    <CalendarBlank aria-hidden="true" size={16} weight="light" />
-                    {deck.dateLabel}
-                  </time>
-                </div>
-                <p className="type-eyebrow">{deck.event}</p>
-                <p className="type-body-prose">{deck.description}</p>
-                <p className="catalog-tags">{deck.tags.join(" · ")}</p>
-              </div>
-            </Link>
-          </article>
+
+              <h2
+                style={{
+                  fontSize: "18px",
+                  fontWeight: 600,
+                  margin: "0 0 6px",
+                  letterSpacing: "-0.02em",
+                  color: "#f4f4f5",
+                }}
+              >
+                {deck.title}
+              </h2>
+
+              <p
+                style={{
+                  color: "#a1a1aa",
+                  fontSize: "14px",
+                  lineHeight: "1.5",
+                  margin: 0,
+                }}
+              >
+                {deck.description}
+              </p>
+            </div>
+          </Link>
         ))}
-      </section>
+      </div>
     </main>
   );
 }
