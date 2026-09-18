@@ -50,8 +50,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: var(--landing-paper);
-  color: var(--landing-ink);
+  background: #09090b;
+  color: #f4f4f5;
   font-family: var(--font-rethink-sans);
   font-optical-sizing: auto;
   overflow-wrap: break-word;
