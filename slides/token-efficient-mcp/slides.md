@@ -225,9 +225,9 @@ class: mcp-slide
 </div>
 
 <div class="protocol-points">
-  <p v-click="2" class="protocol-point"><ph-stack-light class="ph-icon" aria-hidden="true" /> All tool definitions are loaded into context upfront.</p>
-  <p v-click="3" class="protocol-problem"><ph-warning-circle-light class="ph-icon" aria-hidden="true" /> Most requests need a few tools. Many clients load them all.</p>
-  <p v-click="4" class="protocol-problem"><ph-warning-circle-light class="ph-icon" aria-hidden="true" /> Resulting in <strong>7,500+ tokens</strong> loaded into the agent's context upfront on every request.</p>
+  <p v-click="2" class="protocol-point"><ph-stack-light class="ph-icon" aria-hidden="true" /> <span>All tool definitions are loaded into context upfront.</span></p>
+  <p v-click="3" class="protocol-problem"><ph-warning-circle-light class="ph-icon" aria-hidden="true" /> <span>Most requests need a few tools. Many clients load them all.</span></p>
+  <p v-click="4" class="protocol-problem"><ph-warning-circle-light class="ph-icon" aria-hidden="true" /> <span>Resulting in <strong>7,500+ tokens</strong> loaded into the agent's context upfront on every request.</span></p>
 </div>
 
 <!--
