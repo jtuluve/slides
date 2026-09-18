@@ -86,7 +86,7 @@ async function buildDeck(deckId) {
     "build",
     entry,
     "--base",
-    `/_slidev/${deckId}/`,
+    `/slides/${deckId}/`,
     "--out",
     output,
     "--without-notes",

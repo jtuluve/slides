@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport = {
-  themeColor: "#01378F",
+  themeColor: "#09090b",
 };
 
 export default function RootLayout({
@@ -35,7 +35,9 @@ export default function RootLayout({
       lang="en"
       className={`antialiased ${rethinkSans.variable} ${ibmPlexMono.variable} ${rethinkSans.className}`}
     >
-      <body>{children}</body>
+      <body style={{ backgroundColor: "#09090b", color: "#f4f4f5", margin: 0, padding: 0 }}>
+        {children}
+      </body>
     </html>
   );
 }
