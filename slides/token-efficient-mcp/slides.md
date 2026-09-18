@@ -15,7 +15,6 @@ class: cover-slide
 mdc: true
 aspectRatio: 16/9
 canvasWidth: 980
-routerMode: hash
 ---
 
 <div class="cover-grid">
