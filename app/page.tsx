@@ -59,8 +59,9 @@ export default function HomePage() {
       {/* Presentation Cards List */}
       <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
         {decks.map((deck) => (
-          <article
+          <Link
             key={deck.id}
+            href={`/slides/${deck.id}`}
             style={{
               border: "1px solid #27272a",
               borderRadius: "12px",
@@ -70,11 +71,12 @@ export default function HomePage() {
               gridTemplateColumns: "220px 1fr",
               gap: "24px",
               alignItems: "center",
+              textDecoration: "none",
+              transition: "border-color 0.2s ease, background-color 0.2s ease",
             }}
           >
             {/* First Slide Screenshot Preview */}
-            <Link
-              href={`/slides/${deck.id}`}
+            <div
               style={{
                 position: "relative",
                 aspectRatio: "16 / 9",
@@ -96,7 +98,7 @@ export default function HomePage() {
                   display: "block",
                 }}
               />
-            </Link>
+            </div>
 
             {/* Deck Content */}
             <div
@@ -111,14 +113,13 @@ export default function HomePage() {
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "center",
-                  fontSize: "13px",
+                  fontSize: "12px",
                   marginBottom: "6px",
+                  color: "#71717a",
                 }}
               >
-                <span style={{ color: "#d4d4d8", fontWeight: 500 }}>
-                  {deck.event}
-                </span>
-                <span style={{ color: "#71717a" }}>{deck.date}</span>
+                <span>{deck.event}</span>
+                <span>{deck.date}</span>
               </div>
 
               <h2
@@ -127,17 +128,10 @@ export default function HomePage() {
                   fontWeight: 600,
                   margin: "0 0 6px",
                   letterSpacing: "-0.02em",
+                  color: "#f4f4f5",
                 }}
               >
-                <Link
-                  href={`/slides/${deck.id}`}
-                  style={{
-                    color: "#f4f4f5",
-                    textDecoration: "none",
-                  }}
-                >
-                  {deck.title}
-                </Link>
+                {deck.title}
               </h2>
 
               <p
@@ -151,7 +145,7 @@ export default function HomePage() {
                 {deck.description}
               </p>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
     </main>
