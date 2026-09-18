@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const themeStorageKey = "minimal-theme";
@@ -159,7 +158,7 @@ export default function HomePage() {
         {/* Presentation Cards List */}
         <div style={{ display: "flex", flexDirection: "column" }}>
           {decks.map((deck) => (
-            <Link
+            <a
               key={deck.id}
               href={`/slides/${deck.id}`}
               style={{
@@ -242,7 +241,7 @@ export default function HomePage() {
                   {deck.description}
                 </p>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </main>
