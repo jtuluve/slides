@@ -1,8 +1,28 @@
 import type { Metadata } from "next";
+import { IBM_Plex_Mono, Rethink_Sans } from "next/font/google";
+import "./globals.css";
+
+const rethinkSans = Rethink_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-rethink-sans",
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  variable: "--font-ibm-plex-mono",
+});
 
 export const metadata: Metadata = {
-  title: "Presentations & Slides",
-  description: "Slidev presentation decks hosted with Next.js",
+  title: "Presentations — Manasija",
+  description:
+    "Talks on market intelligence systems, MCP design, and inspectable agent tools.",
+};
+
+export const viewport = {
+  themeColor: "#01378F",
 };
 
 export default function RootLayout({
@@ -11,19 +31,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body
-        style={{
-          margin: 0,
-          padding: 0,
-          backgroundColor: "#111213",
-          color: "#f5f5f2",
-          fontFamily:
-            '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-        }}
-      >
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={`antialiased ${rethinkSans.variable} ${ibmPlexMono.variable} ${rethinkSans.className}`}
+    >
+      <body>{children}</body>
     </html>
   );
 }

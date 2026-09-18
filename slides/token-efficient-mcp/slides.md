@@ -10,7 +10,7 @@ tags:
   - AI Agents
 published: true
 transition: fade-out
-colorSchema: dark
+colorSchema: light
 class: cover-slide
 mdc: true
 aspectRatio: 16/9
@@ -48,8 +48,14 @@ class: speaker-slide
       <p class="speaker-role">Software Engineer, Manasija</p>
     </div>
     <div class="speaker-links">
-      <a href="https://jtuluve.is-a.dev">jtuluve.is-a.dev</a>
-      <a href="https://www.linkedin.com/in/jtuluve/">linkedin.com/in/jtuluve</a>
+      <a href="https://jtuluve.is-a.dev">
+        <ph-globe-simple-light class="ph-icon" aria-hidden="true" />
+        jtuluve.is-a.dev
+      </a>
+      <a href="https://www.linkedin.com/in/jtuluve/">
+        <ph-linkedin-logo-light class="ph-icon" aria-hidden="true" />
+        linkedin.com/in/jtuluve
+      </a>
     </div>
   </article>
 
@@ -62,7 +68,14 @@ class: speaker-slide
       <p class="speaker-role">Dev Relations Engineer, Manasija</p>
     </div>
     <div class="speaker-links">
-      <a href="https://www.linkedin.com/in/deiondz/">linkedin.com/in/deiondz</a>
+      <a href="https://www.linkedin.com/in/deiondz/">
+        <ph-linkedin-logo-light class="ph-icon" aria-hidden="true" />
+        linkedin.com/in/deiondz
+      </a>
+      <a href="https://x.com/Deion_Dz">
+        <ph-x-logo-light class="ph-icon" aria-hidden="true" />
+        x.com/Deion_Dz
+      </a>
     </div>
   </article>
 </div>
@@ -71,6 +84,7 @@ class: speaker-slide
 Jnanesh profile: https://in.linkedin.com/in/jtuluve
 Jnanesh portfolio: https://jtuluve.is-a.dev
 Deion profile and role: https://in.linkedin.com/in/deiondz
+Deion on X: https://x.com/Deion_Dz
 Deion author profile and photo: https://drishti.manasija.in/authors/deion-dsouza
 The display name is intentionally “Jnanesh”, per the speaker's request.
 -->
@@ -79,7 +93,7 @@ The display name is intentionally “Jnanesh”, per the speaker's request.
 class: part-slide
 ---
 
-<div class="part-num">PART 00</div>
+<div class="part-num">Part 00</div>
 <h1>Introduction to MCP</h1>
 <p class="part-desc">How AI apps connect with external tools and market data</p>
 
@@ -91,7 +105,7 @@ class: mcp-intro-slide
 
 <div class="basics-connection">
   <div class="basics-node">
-    <span>AI APP</span>
+    <span>AI app</span>
     <strong>Claude · Codex</strong>
     <small>The assistant you use</small>
   </div>
@@ -100,7 +114,7 @@ class: mcp-intro-slide
     <span>MCP</span>
   </div>
   <div class="basics-node basics-server">
-    <span>MCP SERVER</span>
+    <span>MCP server</span>
     <strong>Tools · data</strong>
     <small>What the assistant can reach</small>
   </div>
@@ -121,16 +135,16 @@ class: mcp-tool-intro-slide
 
 <div class="basics-tool-flow">
   <div class="basics-tool-step">
-    <span>QUESTION</span>
+    <span><ph-chat-circle-light class="ph-icon" aria-hidden="true" /> Question</span>
     <strong>What changed after earnings?</strong>
   </div>
   <div class="basics-tool-step">
-    <span>TOOL CALL</span>
+    <span><ph-wrench-light class="ph-icon" aria-hidden="true" /> Tool call</span>
     <strong>Look up the filing</strong>
     <small><code>get_earnings_filing</code></small>
   </div>
   <div class="basics-tool-step">
-    <span>RESULT</span>
+    <span><ph-stack-light class="ph-icon" aria-hidden="true" /> Result</span>
     <strong>Earnings data</strong>
   </div>
 </div>
@@ -157,9 +171,9 @@ class: product-slide
     <p>Indian-market events, structured for agents.</p>
     <p class="product-detail">Filings, earnings, concalls and news arrive as dated records your agent can inspect.</p>
     <div class="product-interfaces">
-      <span>REST APIs</span>
-      <span>WebSockets</span>
-      <span>MCP</span>
+      <span><ph-brackets-curly-light class="ph-icon" aria-hidden="true" /> REST APIs</span>
+      <span><ph-plugs-connected-light class="ph-icon" aria-hidden="true" /> WebSockets</span>
+      <span><ph-plugs-light class="ph-icon" aria-hidden="true" /> MCP</span>
     </div>
   </div>
   <div class="product-visual">
@@ -177,7 +191,7 @@ Official logo mark, wordmark, and product preview: https://drishti.manasija.in/l
 class: part-slide
 ---
 
-<div class="part-num">PART 01</div>
+<div class="part-num">Part 01</div>
 <h1>The Problem</h1>
 <p class="part-desc">How tool definitions inflate prompt context and token costs</p>
 
@@ -189,7 +203,7 @@ class: mcp-slide
 
 <div class="protocol-stage">
   <div class="protocol-endpoint protocol-host">
-    <span>HOST</span>
+    <span>Host</span>
     <strong>Claude, Codex,<br>your agent</strong>
   </div>
 
@@ -207,14 +221,14 @@ class: mcp-slide
   </div>
 
   <div class="protocol-endpoint protocol-server">
-    <span>SERVER</span>
+    <span>Server</span>
     <strong>Drishti MCP</strong>
   </div>
 </div>
 
 <div class="protocol-points">
-  <p v-click="2" class="protocol-point">All tool definitions are loaded into context upfront.</p>
-  <p v-click="3" class="protocol-problem">Most requests need a few tools. Many clients load them all.</p>
+  <p v-click="2" class="protocol-point"><ph-stack-light class="ph-icon" aria-hidden="true" /> All tool definitions are loaded into context upfront.</p>
+  <p v-click="3" class="protocol-problem"><ph-warning-circle-light class="ph-icon" aria-hidden="true" /> Most requests need a few tools. Many clients load them all.</p>
 </div>
 
 <!--
@@ -243,7 +257,7 @@ class: result-slide
   </div>
 </div>
 
-<p class="result-note"><b>≈1,000 tokens</b> after loading schemas for 2–3 relevant tools.</p>
+<p class="result-note"><b>≈1,000&nbsp;tokens</b> after loading schemas for 2–3 relevant tools.</p>
 
 <!--
 These are measurements from the Drishti MCP implementation, documented in:
@@ -272,7 +286,7 @@ Memes capturing prompt bloat and wasted tokens.
 class: part-slide
 ---
 
-<div class="part-num">PART 02</div>
+<div class="part-num">Part 02</div>
 <h1>The Solution</h1>
 <p class="part-desc">Designing a token-efficient discovery server in Drishti</p>
 
@@ -286,7 +300,7 @@ class: clue-slide
   <div class="terminal">
     <div class="terminal-top"><i></i><i></i><i></i></div>
     <p><span class="prompt">user</span> Summarize recent market news</p>
-    <p v-click><span class="prompt cyan">claude</span> search_tools("news")</p>
+    <p v-click><span class="prompt assistant">claude</span> search_tools("news")</p>
     <p v-click class="terminal-result">Loaded 1 Drishti tool:<br><b>Drishti:get_news</b></p>
   </div>
   <div class="clue-copy" v-click>
@@ -309,17 +323,17 @@ class: tool-design-slide
 
 <div class="three-tools">
   <div class="tool-row">
-    <span>01</span>
+    <span><ph-magnifying-glass-light class="ph-icon" aria-hidden="true" /></span>
     <code>search_tools</code>
     <p>Names and short descriptions</p>
   </div>
   <div class="tool-row">
-    <span>02</span>
+    <span><ph-list-magnifying-glass-light class="ph-icon" aria-hidden="true" /></span>
     <code>describe_tools</code>
     <p>Full schemas for selected tools</p>
   </div>
   <div class="tool-row">
-    <span>03</span>
+    <span><ph-play-light class="ph-icon" aria-hidden="true" /></span>
     <code>execute_tool</code>
     <p>Tool name plus arguments</p>
   </div>
@@ -342,22 +356,22 @@ class: trace-slide
 
 <div class="trace-line">
   <div class="trace-step" v-click>
-    <span>1</span>
+    <span><ph-magnifying-glass-light class="ph-icon" aria-hidden="true" /></span>
     <code>search_tools</code>
     <small>“earnings + announcements”</small>
   </div>
   <div class="trace-step" v-click>
-    <span>2</span>
+    <span><ph-list-magnifying-glass-light class="ph-icon" aria-hidden="true" /></span>
     <code>describe_tools</code>
     <small>2 matching schemas</small>
   </div>
   <div class="trace-step" v-click>
-    <span>3</span>
+    <span><ph-play-light class="ph-icon" aria-hidden="true" /></span>
     <code>execute_tool</code>
     <small>fresh Drishti records</small>
   </div>
   <div class="trace-step final-step" v-click>
-    <span>4</span>
+    <span><ph-check-circle-light class="ph-icon" aria-hidden="true" /></span>
     <code>answer</code>
     <small>dated, checkable context</small>
   </div>
@@ -372,8 +386,8 @@ This is an illustrative request trace, not a live market answer.
 class: part-slide
 ---
 
-<div class="part-num">PART 03</div>
-<h1>Tradeoffs & Guidance</h1>
+<div class="part-num">Part 03</div>
+<h1>Tradeoffs and guidance</h1>
 <p class="part-desc">Evaluating performance savings and real-world applicability</p>
 
 ---
@@ -384,8 +398,8 @@ class: tradeoff-slide
 
 <div class="tradeoff-scale">
   <div class="tradeoff-side savings">
-    <span>CONTEXT</span>
-    <strong>~7,200 fewer<br>initial tokens</strong>
+    <span><ph-stack-light class="ph-icon" aria-hidden="true" /> Context</span>
+    <strong>~7,200 fewer<br>initial&nbsp;tokens</strong>
     <p>Less schema noise gives the model more room for the actual research.</p>
   </div>
   <div class="tradeoff-divider">
@@ -393,7 +407,7 @@ class: tradeoff-slide
     <b>vs</b>
   </div>
   <div class="tradeoff-side latency">
-    <span>LATENCY</span>
+    <span><ph-clock-light class="ph-icon" aria-hidden="true" /> Latency</span>
     <strong>1–2 extra<br>discovery calls</strong>
     <p>The agent searches and loads definitions before execution.</p>
   </div>
@@ -425,8 +439,8 @@ class: fit-slide
 </div>
 
 <div class="fit-guidance">
-  <p><b>Good fit</b> Large catalog, expensive schemas, few tools per request</p>
-  <p><b>Weak fit</b> Small catalog or every tool appears in most sessions</p>
+  <p><b><ph-check-circle-light class="ph-icon" aria-hidden="true" /> Good fit</b> Large catalog, expensive schemas, few tools per request</p>
+  <p><b><ph-x-circle-light class="ph-icon" aria-hidden="true" /> Weak fit</b> Small catalog or every tool appears in most sessions</p>
 </div>
 
 <!--
@@ -441,14 +455,14 @@ class: demo-slide
 # Try it with Drishti
 
 <div class="demo-prompt">
-  <span>ASK</span>
+  <span><ph-chat-circle-light class="ph-icon" aria-hidden="true" /> Ask</span>
   <p>Compare the latest earnings and announcements for <b>RELIANCE</b> and <b>TCS</b>.</p>
   <p>What changed? Cite the Drishti records behind each answer.</p>
 </div>
 
 <div class="demo-footer">
   <span>mcp.drishti.manasija.in</span>
-  <b>Fresh records produce a checkable answer</b>
+  <b><ph-shield-check-light class="ph-icon" aria-hidden="true" /> Fresh records produce a checkable answer</b>
 </div>
 
 <!--
@@ -467,9 +481,9 @@ class: end-slide
     <img src="/drishti-qr.png" alt="Drishti QR Code" class="end-qr-code">
   </div>
   <div class="end-links">
-    <div><span>PRODUCT</span> drishti.manasija.in</div>
-    <div><span>ARTICLE</span> jtuluve.is-a.dev/articles/…</div>
-    <div><span>SPEAKERS</span> /in/jtuluve&nbsp;&nbsp; /in/deiondz</div>
+    <div><span><ph-globe-simple-light class="ph-icon" aria-hidden="true" /> Product</span> drishti.manasija.in</div>
+    <div><span><ph-newspaper-light class="ph-icon" aria-hidden="true" /> Article</span> jtuluve.is-a.dev/articles/…</div>
+    <div><span><ph-users-light class="ph-icon" aria-hidden="true" /> Speakers</span> /in/jtuluve&nbsp;&nbsp; /in/deiondz</div>
   </div>
 </div>
 
@@ -478,3 +492,51 @@ Drishti: https://drishti.manasija.in
 Article: https://jtuluve.is-a.dev/articles/designing-token-efficient-mcp-server
 Speakers: https://in.linkedin.com/in/jtuluve and https://in.linkedin.com/in/deiondz
 -->
+
+---
+class: speaker-slide
+---
+
+<h1 class="speakers-title">Thank you ;D</h1>
+
+<div class="speakers-grid">
+  <article class="speaker-card">
+    <div class="speaker-photo">
+      <img src="/jnanesh.png" alt="Portrait of Jnanesh">
+    </div>
+    <div class="speaker-card-copy">
+      <h2>Jnanesh</h2>
+      <p class="speaker-role">Software Engineer, Manasija</p>
+    </div>
+    <div class="speaker-links">
+      <a href="https://jtuluve.is-a.dev">
+        <ph-globe-simple-light class="ph-icon" aria-hidden="true" />
+        jtuluve.is-a.dev
+      </a>
+      <a href="https://www.linkedin.com/in/jtuluve/">
+        <ph-linkedin-logo-light class="ph-icon" aria-hidden="true" />
+        linkedin.com/in/jtuluve
+      </a>
+    </div>
+  </article>
+
+  <article class="speaker-card">
+    <div class="speaker-photo">
+      <img src="/deion.jpg" alt="Portrait of Deion Dsouza">
+    </div>
+    <div class="speaker-card-copy">
+      <h2>Deion Dsouza</h2>
+      <p class="speaker-role">Dev Relations Engineer, Manasija</p>
+    </div>
+    <div class="speaker-links">
+      <a href="https://www.linkedin.com/in/deiondz/">
+        <ph-linkedin-logo-light class="ph-icon" aria-hidden="true" />
+        linkedin.com/in/deiondz
+      </a>
+      <a href="https://x.com/Deion_Dz">
+        <ph-x-logo-light class="ph-icon" aria-hidden="true" />
+        x.com/Deion_Dz
+      </a>
+    </div>
+  </article>
+</div>

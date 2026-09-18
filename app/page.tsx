@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { ArrowRight, CalendarBlank } from "@phosphor-icons/react/dist/ssr";
 
 const decks = [
   {
     id: "token-efficient-mcp",
     title: "Designing a Token-Efficient MCP Server",
     description:
-      "How work on Drishti led to a three-tool MCP design that reduced initial tool overhead from 7,500+ tokens to roughly 280.",
+      "Drishti’s three-tool MCP reduced initial tool context from 7,500+\u00a0tokens to about 280, then loads only the schemas a request needs.",
     date: "2026-09-19",
     tags: ["MCP", "Drishti", "AI Agents"],
   },
@@ -13,100 +14,41 @@ const decks = [
 
 export default function HomePage() {
   return (
-    <main
-      style={{
-        maxWidth: "860px",
-        margin: "0 auto",
-        padding: "80px 24px",
-      }}
-    >
-      <header style={{ marginBottom: "50px" }}>
-        <h1
-          style={{
-            fontSize: "42px",
-            fontWeight: 400,
-            letterSpacing: "-0.04em",
-            margin: "0 0 12px",
-          }}
-        >
-          Presentations & Decks
-        </h1>
-        <p style={{ color: "#9a9e9f", fontSize: "18px", margin: 0 }}>
-          Interactive Slidev talks and slide decks.
+    <main className="catalog">
+      <header className="catalog-header">
+        <p className="type-eyebrow">Manasija</p>
+        <h1 className="type-display">Presentations</h1>
+        <p className="type-body-prose">
+          Talks on turning noisy market systems into inspectable tools for
+          agents.
         </p>
       </header>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+      <section className="catalog-list" aria-label="Slide decks">
         {decks.map((deck) => (
-          <article
-            key={deck.id}
-            style={{
-              border: "1px solid #34383a",
-              borderRadius: "12px",
-              padding: "28px",
-              backgroundColor: "rgba(255,255,255,0.02)",
-              transition: "border-color 0.2s ease",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "baseline",
-                marginBottom: "12px",
-              }}
-            >
-              <h2 style={{ fontSize: "24px", fontWeight: 400, margin: 0 }}>
-                <Link
-                  href={`/slides/${deck.id}`}
-                  style={{
-                    color: "#82dfe9",
-                    textDecoration: "none",
-                  }}
-                >
+          <article key={deck.id} className="catalog-item">
+            <div className="catalog-item-meta">
+              <h2>
+                <Link href={`/slides/${deck.id}`}>
                   {deck.title}
+                  <ArrowRight
+                    aria-hidden="true"
+                    className="catalog-link-icon"
+                    size={18}
+                    weight="light"
+                  />
                 </Link>
               </h2>
-              <span
-                style={{
-                  color: "#6f7476",
-                  fontSize: "13px",
-                  fontFamily: "monospace",
-                }}
-              >
+              <time className="type-mono" dateTime={deck.date}>
+                <CalendarBlank aria-hidden="true" size={16} weight="light" />
                 {deck.date}
-              </span>
+              </time>
             </div>
-            <p
-              style={{
-                color: "#9a9e9f",
-                fontSize: "15px",
-                lineHeight: "1.5",
-                margin: "0 0 20px",
-              }}
-            >
-              {deck.description}
-            </p>
-            <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-              {deck.tags.map((tag) => (
-                <span
-                  key={tag}
-                  style={{
-                    backgroundColor: "rgba(130, 223, 233, 0.1)",
-                    color: "#82dfe9",
-                    fontSize: "12px",
-                    fontFamily: "monospace",
-                    padding: "4px 10px",
-                    borderRadius: "6px",
-                  }}
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+            <p className="type-body-prose">{deck.description}</p>
+            <p className="catalog-tags">{deck.tags.join(" · ")}</p>
           </article>
         ))}
-      </div>
+      </section>
     </main>
   );
 }

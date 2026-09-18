@@ -12,6 +12,7 @@
     "slides:mcp": "node scripts/slidev.mjs mcp"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
     "@tailwindcss/postcss": "^4.1.12",
     "clsx": "^2.1.1",
     "next": "15.2.6",
@@ -22,6 +23,7 @@
     "tailwindcss": "^4.1.12"
   },
   "devDependencies": {
+    "@iconify-json/ph": "^1.2.2",
     "@slidev/cli": "^53.0.0",
     "@slidev/theme-default": "^0.25.0",
     "@types/node": "^22",
