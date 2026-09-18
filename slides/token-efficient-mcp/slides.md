@@ -337,7 +337,7 @@ class: result-slide
   </div>
 </div>
 
-<p class="result-note"><b>≈1,000&nbsp;tokens</b> after loading schemas for 2–3 relevant tools.</p>
+<p class="result-note"><b>≈800&nbsp;tokens</b> after loading schemas for 2–3 relevant tools.</p>
 
 <!--
 These are measurements from the Drishti MCP implementation, documented in:
@@ -398,7 +398,7 @@ class: tradeoff-slide
 <div class="tradeoff-scale">
   <div class="tradeoff-side savings">
     <span><ph-stack-light class="ph-icon" aria-hidden="true" /> Context</span>
-    <strong>~7,200 fewer<br>initial&nbsp;tokens</strong>
+    <strong>Fewer initial<br>tokens</strong>
     <p>Less schema noise gives the model more room for the actual research.</p>
   </div>
   <div class="tradeoff-divider">
