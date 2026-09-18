@@ -1319,16 +1319,6 @@
 	text-transform: uppercase;
 	white-space: nowrap;
 	margin-bottom: 20px;
-	display: flex;
-	align-items: center;
-	gap: 12px;
-}
-.part-num::before {
-	content: "";
-	display: inline-block;
-	width: 24px;
-	height: 1px;
-	background-color: var(--accent);
 }
 .part-slide h1 {
 	font-size: var(--text-display);
