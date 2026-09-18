@@ -1,0 +1,30 @@
+:root {
+  --slidev-theme-primary: #ea580c;
+}
+
+.slidev-layout {
+  background:
+    linear-gradient(90deg, rgba(234, 88, 12, 0.08) 1px, transparent 1px),
+    #fafafa;
+  background-size: 4rem 100%;
+  color: #18181b;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+}
+
+.slidev-layout h1 {
+  font-weight: 650;
+  letter-spacing: -0.04em;
+}
+
+.slidev-layout code {
+  font-family: "IBM Plex Mono", "Cascadia Code", monospace;
+}
+
+.deck-label {
+  color: #ea580c;
+  font-family: "IBM Plex Mono", "Cascadia Code", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
