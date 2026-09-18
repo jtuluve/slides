@@ -9,13 +9,6 @@ const decks = [
     date: "2026-09-19",
     tags: ["MCP", "Drishti", "AI Agents"],
   },
-  {
-    id: "starter",
-    title: "Starter Deck",
-    description: "Template starter deck for Slidev presentations.",
-    date: "2026-09-01",
-    tags: ["Template"],
-  },
 ];
 
 export default function HomePage() {
