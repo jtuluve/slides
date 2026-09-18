@@ -26,34 +26,23 @@ export default function HomePage() {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          alignItems: "baseline",
+          alignItems: "center",
           borderBottom: "1px solid #27272a",
           paddingBottom: "24px",
           marginBottom: "40px",
         }}
       >
-        <div>
-          <h1
-            style={{
-              fontSize: "26px",
-              fontWeight: 600,
-              letterSpacing: "-0.03em",
-              margin: 0,
-              color: "#f4f4f5",
-            }}
-          >
-            Slides
-          </h1>
-          <p
-            style={{
-              fontSize: "14px",
-              color: "#a1a1aa",
-              margin: "4px 0 0",
-            }}
-          >
-            Presentations and talks by Jnanesh
-          </p>
-        </div>
+        <h1
+          style={{
+            fontSize: "26px",
+            fontWeight: 600,
+            letterSpacing: "-0.03em",
+            margin: 0,
+            color: "#f4f4f5",
+          }}
+        >
+          Slides
+        </h1>
         <a
           href="https://j.tuluve.dev"
           style={{
@@ -114,76 +103,53 @@ export default function HomePage() {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "space-between",
-                height: "100%",
+                justifyContent: "center",
               }}
             >
-              <div>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    fontSize: "13px",
-                    marginBottom: "6px",
-                  }}
-                >
-                  <span style={{ color: "#d4d4d8", fontWeight: 500 }}>
-                    {deck.event}
-                  </span>
-                  <span style={{ color: "#71717a" }}>{deck.date}</span>
-                </div>
-
-                <h2
-                  style={{
-                    fontSize: "18px",
-                    fontWeight: 600,
-                    margin: "0 0 6px",
-                    letterSpacing: "-0.02em",
-                  }}
-                >
-                  <Link
-                    href={`/slides/${deck.id}`}
-                    style={{
-                      color: "#f4f4f5",
-                      textDecoration: "none",
-                    }}
-                  >
-                    {deck.title}
-                  </Link>
-                </h2>
-
-                <p
-                  style={{
-                    color: "#a1a1aa",
-                    fontSize: "14px",
-                    lineHeight: "1.5",
-                    margin: 0,
-                  }}
-                >
-                  {deck.description}
-                </p>
-              </div>
-
               <div
                 style={{
                   display: "flex",
-                  justifyContent: "flex-end",
-                  marginTop: "16px",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  fontSize: "13px",
+                  marginBottom: "6px",
+                }}
+              >
+                <span style={{ color: "#d4d4d8", fontWeight: 500 }}>
+                  {deck.event}
+                </span>
+                <span style={{ color: "#71717a" }}>{deck.date}</span>
+              </div>
+
+              <h2
+                style={{
+                  fontSize: "18px",
+                  fontWeight: 600,
+                  margin: "0 0 6px",
+                  letterSpacing: "-0.02em",
                 }}
               >
                 <Link
                   href={`/slides/${deck.id}`}
                   style={{
-                    color: "#a1a1aa",
-                    fontSize: "13px",
-                    textDecoration: "underline",
-                    textUnderlineOffset: "4px",
+                    color: "#f4f4f5",
+                    textDecoration: "none",
                   }}
                 >
-                  View slides →
+                  {deck.title}
                 </Link>
-              </div>
+              </h2>
+
+              <p
+                style={{
+                  color: "#a1a1aa",
+                  fontSize: "14px",
+                  lineHeight: "1.5",
+                  margin: 0,
+                }}
+              >
+                {deck.description}
+              </p>
             </div>
           </article>
         ))}
