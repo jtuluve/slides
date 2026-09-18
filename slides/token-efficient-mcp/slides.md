@@ -227,40 +227,13 @@ class: mcp-slide
 <div class="protocol-points">
   <p v-click="2" class="protocol-point"><ph-stack-light class="ph-icon" aria-hidden="true" /> All tool definitions are loaded into context upfront.</p>
   <p v-click="3" class="protocol-problem"><ph-warning-circle-light class="ph-icon" aria-hidden="true" /> Most requests need a few tools. Many clients load them all.</p>
+  <p v-click="4" class="protocol-problem"><ph-warning-circle-light class="ph-icon" aria-hidden="true" /> Resulting in <strong>7,500+ tokens</strong> loaded into the agent's context upfront on every request.</p>
 </div>
 
 <!--
 MCP architecture and tools/list behavior: https://modelcontextprotocol.io/docs/learn/architecture
 Current Drishti tool catalog: https://drishti.manasija.in/docs/guides/drishti-mcp#available-mcp-tools
 The 2–4 tool observation comes from our Drishti development experience documented at https://jtuluve.is-a.dev/articles/designing-token-efficient-mcp-server
--->
-
----
-class: result-slide
----
-
-# Initial tool context
-
-<div class="token-comparison">
-  <div class="token-before">
-    <span class="token-label">All schemas loaded</span>
-    <strong>7,500<span>+</span></strong>
-    <div class="meter meter-before"><i></i></div>
-  </div>
-  <div class="collapse-mark">÷ 27</div>
-  <div class="token-after">
-    <span class="token-label">Discovery tools only</span>
-    <strong>≈280</strong>
-    <div class="meter meter-after"><i></i></div>
-  </div>
-</div>
-
-<p class="result-note"><b>≈1,000&nbsp;tokens</b> after loading schemas for 2–3 relevant tools.</p>
-
-<!--
-These are measurements from the Drishti MCP implementation, documented in:
-https://jtuluve.is-a.dev/articles/designing-token-efficient-mcp-server
-7,500 / 280 ≈ 26.8, shown as ÷27 for a visual comparison.
 -->
 
 ---
