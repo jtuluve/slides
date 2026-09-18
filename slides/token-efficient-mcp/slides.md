@@ -23,6 +23,9 @@ canvasWidth: 980
     <h1>Designing a <span>token-efficient</span> MCP server</h1>
     <p class="cover-subtitle">A lesson from Drishti</p>
   </div>
+  <div class="cover-art">
+    <img src="/cover-illustration.png" alt="Pixel-art character at a laptop">
+  </div>
   <div class="speaker-lockup">
     <strong>Jnanesh and Deion Dsouza</strong>
     <span class="cover-brand"><img src="/manasija.svg" alt="">Manasija</span>
@@ -39,36 +42,101 @@ class: part-slide
 
 <div class="part-num">Part 00</div>
 <h1>Introduction to MCP</h1>
-<p class="part-desc">How AI apps connect with external tools and market data</p>
+<p class="part-desc">How AI apps connect with external tools</p>
+
+---
+class: isolated-slide
+---
+
+# Models only know what's in their context
+
+<div class="isolated-wants">
+  <span>If the AI needs to</span>
+  <div class="isolated-grid">
+    <div>
+      <span><ph-database-light class="ph-icon" aria-hidden="true" /></span>
+      <strong>Read a database</strong>
+    </div>
+    <div>
+      <span><ph-files-light class="ph-icon" aria-hidden="true" /></span>
+      <strong>Search company docs</strong>
+    </div>
+    <div>
+      <span><ph-github-logo-light class="ph-icon" aria-hidden="true" /></span>
+      <strong>Open a GitHub issue</strong>
+    </div>
+    <div>
+      <span><ph-chart-line-up-light class="ph-icon" aria-hidden="true" /></span>
+      <strong>Fetch market data</strong>
+    </div>
+    <div>
+      <span><ph-address-book-light class="ph-icon" aria-hidden="true" /></span>
+      <strong>Update a CRM</strong>
+    </div>
+  </div>
+</div>
+
+<p class="isolated-close">For an AI to do anything beyond that, it needs tools and connections.</p>
+
+<!--
+Model (context only) → AI (actions) → tools and APIs → MCP as the shared way to connect them.
+-->
+
+---
+class: meme-slide
+---
+
+<div class="meme-stage meme-stage-compact">
+  <img src="/rest-graphql-soap.jpg" alt="Dinosaurs labeled REST, GraphQL, and SOAP">
+</div>
+
+<!--
+A beat on older API styles before introducing MCP as the shared connection.
+-->
 
 ---
 class: mcp-intro-slide
 ---
 
-# MCP standardizes how AI apps connect
+# MCP connects AI apps to tools and data
 
-<div class="basics-connection">
-  <div class="basics-node">
-    <span>AI app</span>
-    <strong>Claude · Codex</strong>
-    <small>The assistant you use</small>
+<div class="mcp-simple-wrap">
+  <div class="mcp-simple-steps">
+    <div class="mcp-step">
+      <strong>Claude · Codex</strong>
+      <span class="mcp-node" aria-hidden="true"></span>
+    </div>
+    <span class="mcp-link" aria-hidden="true"></span>
+    <div class="mcp-step mcp-step-mcp">
+      <strong>MCP</strong>
+      <span class="mcp-node mcp-node-logo">
+        <img src="/mcp-mark.svg" alt="">
+      </span>
+    </div>
+    <span class="mcp-link" aria-hidden="true"></span>
+    <div class="mcp-step">
+      <strong>Tools · Data</strong>
+      <span class="mcp-node" aria-hidden="true"></span>
+    </div>
   </div>
-  <div class="basics-bridge">
-    <img src="/mcp-mark.svg" alt="Model Context Protocol logo">
-    <span>MCP</span>
-  </div>
-  <div class="basics-node basics-server">
-    <span>MCP server</span>
-    <strong>Tools · data</strong>
-    <small>What the assistant can reach</small>
-  </div>
+  <p class="mcp-simple-caption">One standard way for AI apps to connect to the outside world.</p>
 </div>
-
-<p class="basics-definition">Model Context Protocol · one shared way to find and use tools and data.</p>
 
 <!--
 MCP architecture: https://modelcontextprotocol.io/docs/learn/architecture
 Official MCP logo: https://modelcontextprotocol.io/favicon.svg
+-->
+
+---
+class: meme-slide
+---
+
+<div class="meme-stage meme-stage-compact">
+  <img src="/mcp-handshake.jpg" alt="Agents and apps shaking hands through MCP">
+</div>
+
+<!--
+MCP as the handshake between agent apps and the systems they need to reach.
 -->
 
 ---
@@ -101,34 +169,20 @@ Illustrative request, not a live market answer.
 -->
 
 ---
-class: product-slide
+class: brand-slide
 ---
 
-<div class="product-heading">
-  <img src="/drishti-logo-mark.svg" alt="">
-  <h1><img src="/drishti-word-mark.svg" alt="Drishti"></h1>
-</div>
-<p class="product-subtitle">The product behind the method</p>
-
-<div class="product-layout">
-  <div class="product-copy">
-    <p>Indian-market events, structured for agents.</p>
-    <p class="product-detail">Filings, earnings, concalls and news arrive as dated records your agent can inspect.</p>
-    <div class="product-interfaces">
-      <span><ph-brackets-curly-light class="ph-icon" aria-hidden="true" /> REST APIs</span>
-      <span><ph-plugs-connected-light class="ph-icon" aria-hidden="true" /> WebSockets</span>
-      <span><ph-plugs-light class="ph-icon" aria-hidden="true" /> MCP</span>
-    </div>
-  </div>
-  <div class="product-visual">
-    <img src="/drishti-earnings-preview.jpg" alt="Drishti earnings data and API response preview">
-  </div>
+<div class="brand-slide-frame">
+  <img
+    class="brand-slide-native"
+    src="/Image.jpg"
+    alt="Drishti — Structured filings for your AI"
+  >
 </div>
 
 <!--
-Product facts: https://drishti.manasija.in
+Drishti: https://drishti.manasija.in
 Drishti MCP docs: https://drishti.manasija.in/docs/guides/drishti-mcp
-Official logo mark, wordmark, and product preview: https://drishti.manasija.in/logo-mark.svg, https://drishti.manasija.in/word-mark.svg, and https://drishti.manasija.in/og-home.jpg
 -->
 
 ---
