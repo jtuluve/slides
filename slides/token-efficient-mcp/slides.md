@@ -19,74 +19,18 @@ canvasWidth: 980
 
 <div class="cover-grid">
   <div class="cover-copy">
+    <p class="cover-eyebrow">Manasija</p>
     <h1>Designing a <span>token-efficient</span> MCP server</h1>
     <p class="cover-subtitle">A lesson from Drishti</p>
-    <div class="speaker-lockup">
-      <strong>Jnanesh and Deion Dsouza</strong>
-      <span class="cover-brand"><img src="/manasija.svg" alt="">Manasija</span>
-    </div>
+  </div>
+  <div class="speaker-lockup">
+    <strong>Jnanesh and Deion Dsouza</strong>
+    <span class="cover-brand"><img src="/manasija.svg" alt="">Manasija</span>
   </div>
 </div>
 
 <!--
 Speaker affiliation: https://in.linkedin.com/in/jtuluve
--->
-
----
-class: speaker-slide
----
-
-<h1 class="speakers-title">Speakers</h1>
-
-<div class="speakers-grid">
-  <article class="speaker-card">
-    <div class="speaker-photo">
-      <img src="/jnanesh.png" alt="Portrait of Jnanesh">
-    </div>
-    <div class="speaker-card-copy">
-      <h2>Jnanesh</h2>
-      <p class="speaker-role">Software Engineer, Manasija</p>
-    </div>
-    <div class="speaker-links">
-      <a href="https://jtuluve.is-a.dev">
-        <ph-globe-simple-light class="ph-icon" aria-hidden="true" />
-        jtuluve.is-a.dev
-      </a>
-      <a href="https://www.linkedin.com/in/jtuluve/">
-        <ph-linkedin-logo-light class="ph-icon" aria-hidden="true" />
-        linkedin.com/in/jtuluve
-      </a>
-    </div>
-  </article>
-
-  <article class="speaker-card">
-    <div class="speaker-photo">
-      <img src="/deion.jpg" alt="Portrait of Deion Dsouza">
-    </div>
-    <div class="speaker-card-copy">
-      <h2>Deion Dsouza</h2>
-      <p class="speaker-role">Dev Relations Engineer, Manasija</p>
-    </div>
-    <div class="speaker-links">
-      <a href="https://www.linkedin.com/in/deiondz/">
-        <ph-linkedin-logo-light class="ph-icon" aria-hidden="true" />
-        linkedin.com/in/deiondz
-      </a>
-      <a href="https://x.com/Deion_Dz">
-        <ph-x-logo-light class="ph-icon" aria-hidden="true" />
-        x.com/Deion_Dz
-      </a>
-    </div>
-  </article>
-</div>
-
-<!--
-Jnanesh profile: https://in.linkedin.com/in/jtuluve
-Jnanesh portfolio: https://jtuluve.is-a.dev
-Deion profile and role: https://in.linkedin.com/in/deiondz
-Deion on X: https://x.com/Deion_Dz
-Deion author profile and photo: https://drishti.manasija.in/authors/deion-dsouza
-The display name is intentionally “Jnanesh”, per the speaker's request.
 -->
 
 ---
