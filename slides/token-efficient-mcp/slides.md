@@ -18,8 +18,15 @@ canvasWidth: 980
 ---
 
 <div class="cover-grid">
+  <header class="cover-event">
+    <img class="cover-event-logo" src="/hackersmang-logo.png" alt="Hackerspace Mangaluru">
+    <div class="cover-event-copy">
+      <p class="cover-event-name">Dev Days Mangaluru <span>#DevDays</span></p>
+      <p class="cover-event-tag">#HMSep26</p>
+      <p class="cover-event-edition">HackersMang, 2026 September Edition</p>
+    </div>
+  </header>
   <div class="cover-copy">
-    <p class="cover-eyebrow">Manasija</p>
     <h1>Designing a <span>token-efficient</span> MCP server</h1>
     <p class="cover-subtitle">A lesson from Drishti</p>
   </div>
@@ -28,9 +35,12 @@ canvasWidth: 980
   </div>
   <div class="speaker-lockup">
     <strong>Jnanesh and Deion Dsouza</strong>
+    <span class="cover-handles">/in/jtuluve · /in/deiondz</span>
     <span class="cover-brand"><img src="/manasija.svg" alt="">Manasija</span>
   </div>
 </div>
+
+<img class="cover-dk24" src="/dk24-logo.png" alt="DK24">
 
 <!--
 Speaker affiliation: https://in.linkedin.com/in/jtuluve
@@ -349,7 +359,7 @@ https://jtuluve.is-a.dev/articles/designing-token-efficient-mcp-server
 class: trace-slide
 ---
 
-# One question. One narrow path.
+# Example flow
 
 <div class="trace-question">“What changed in RELIANCE after its latest earnings?”</div>
 
